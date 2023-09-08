@@ -1,0 +1,29 @@
+{% set pageHeader = entry.pageHeader.all() %}
+
+<section class="page-header" id="home">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+        {% if pageHeader | length %}
+            {% for pageHeader in pageHeader %}
+                {% set bgImage     = pageHeader.backgroundImage.one() %}
+                {% set titleNormal = pageHeader.headingNormal %}
+                {% set titleBold   = pageHeader.headingBold %}
+                {% set text        = pageHeader.text %}
+                {% set linkButton  = pageHeader.linkButton %}
+                <div class="swiper-slide" style="background-image: url({{ bgImage.url }});">
+                    <div class="text">
+                        <p>{{ titleNormal }}</p>
+                        <h1>{{ titleBold }}</h1>
+                        <p>{{ text }}</p>
+                        <div class="button">
+                            <a href="{{ linkButton.getUrl() }}" target="{{ linkButton.getTarget() }}">{{ linkButton.getText('') }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+        <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-left"></i>
+    </div>
+</section>

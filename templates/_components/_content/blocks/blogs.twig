@@ -1,0 +1,126 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+{% set parentEntry    = craft.entries().section('publicPages').slug(entry.slug).one() %}
+{% set blogs          = craft.entries().descendantOf(parentEntry).all() %}
+{% set customEntries  = block.number %}
+{% set title          = block.text %}
+
+{% if customEntries %}
+    {% set parentEntry = craft.entries().section('publicPages').slug('blogs').one() %}
+    {% set blogs       = craft.entries().descendantOf(parentEntry).limit(customEntries) %}
+{% endif %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        <div class="title">
+            <h1>{{ title }}</h1>
+        </div>
+        {% if customEntries %}
+        <div class="swiper">
+            <div class="swiper-wrapper">
+            {% for blog in blogs %}
+                {% set content  = blog.pageContent.level(1).all() %}
+                {% set title    = blog.title %}
+                {% set url      = blog.url %}
+                {% set author   = blog.author %}
+                {% set postDate = blog.postDate | date("d M, Y") %}
+                {% for blog in content %}
+                    {% set image = blog.image.one() %}
+                    {% set text  = blog.shortDescription %}
+                    <div class="swiper-slide block">
+                        <div class="image">
+                            <img src="{{ image.url }}" alt="">
+                            <div class="box">
+                                <div class="icon">
+                                    <i class="fas fa-calendar"></i>
+                                    <p>{{ postDate }}</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user"></i>
+                                    <p>By {{ author.username }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>{{ title }}</h3>
+                            <p>{{ text }}</p>
+                            <div class="button">
+                                <a href="{{ url }}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div class="blocks">
+            {% for blog in blogs %}
+                {% set content  = blog.pageContent.level(1).all() %}
+                {% set title    = blog.title %}
+                {% set url      = blog.url %}
+                {% set author   = blog.author %}
+                {% set postDate = blog.postDate | date("d M, Y") %}
+                {% for blog in content %}
+                    {% set image = blog.image.one() %}
+                    {% set text  = blog.shortDescription %}
+                    <div class="block">
+                        <div class="image">
+                            <img src="{{ image.url }}" alt="">
+                            <div class="box">
+                                <div class="icon">
+                                    <i class="fas fa-calendar"></i>
+                                    <p>{{ postDate }}</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user"></i>
+                                    <p>By {{ author.username }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>{{ title }}</h3>
+                            <p>{{ text }}</p>
+                            <div class="button">
+                                <a href="{{ url }}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

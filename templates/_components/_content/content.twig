@@ -1,0 +1,15 @@
+{% set contentBlocks = entry.pageContent.level(1).all() %}
+
+{% if contentBlocks | length %}
+    <div class="page-content">
+        {% for block in contentBlocks %}
+            {% set handle = block.type.handle %}
+
+            {% include '_components/_content/blocks/' ~ handle with {
+                block: block,
+                blockIndex: loop.index,
+                blockHandle: handle
+            } %}
+        {% endfor %}
+    </div>
+{% endif %}

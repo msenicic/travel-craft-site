@@ -1,0 +1,14 @@
+columnSuffix: jesjgstr
+contentColumnType: boolean
+fieldGroup: cb551f89-c094-4bae-b995-1cf1f2a3fd1b # Site Settings
+handle: haveLogo
+instructions: 'Check this if you have Logo Image'
+name: 'Have Logo'
+searchable: false
+settings:
+  default: true
+  offLabel: 'I dont have'
+  onLabel: 'I have'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

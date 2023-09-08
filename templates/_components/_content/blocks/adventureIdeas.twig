@@ -1,0 +1,72 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+{% set parentEntry    = craft.entries().section('publicPages').slug(entry.slug).one() %}
+{% set ideas          = craft.entries().descendantOf(parentEntry).all() %}
+{% set customEntries  = block.customEntries.all() %}
+{% set title          = block.text %}
+
+{% if customEntries %}
+    {% set ideas = customEntries %}
+{% endif %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        <div class="title">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="blocks">
+            {% for idea in ideas %}
+                {% set content = idea.pageContent.level(1).all() %}
+                {% set title   = idea.title %}
+                {% set url     = idea.url %}
+                {% for idea in content %}
+                    {% set image = idea.image.one() %}
+                    {% set text  = idea.shortDescription %}
+                    <div class="block">
+                        <div class="image"><img src="{{ image.url }}" alt=""></div>
+                        <div class="text">
+                            <h4>{{ title }}</h4>
+                            <p>{{ text }}</p>
+                        </div>
+                        <div class="button">
+                            <a href="{{ url }}" >Read More</a>
+                        </div>
+                    </div>
+                {% endfor %}        
+            {% endfor %}
+        </div>
+    </div>
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

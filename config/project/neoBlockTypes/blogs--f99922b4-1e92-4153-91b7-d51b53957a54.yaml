@@ -1,0 +1,114 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+fieldLayouts:
+  f0edb441-b513-47b0-b853-a77d6d1c32a8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Everything will be automatically displayed, or you can select custom entries to show.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 16537f0f-86b0-4d9c-8f4d-a41ac681d8fc
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 60d0cf0b-c116-4883-acf1-6b7892214209 # Text
+            instructions: null
+            label: Title
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef763b5a-3a74-4bf8-a0a3-465617bc4a41
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 660e1654-5c13-408e-8df6-00275f063180 # Number
+            instructions: null
+            label: 'Custom Blogs'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 130104a5-70fd-48d1-b002-80dc2ce7e937
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e2ab63f0-a0a5-4d2c-ac82-6796e5af003d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d02ce07-ac27-4917-ac5c-9d71c8ae60ea # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b6e8a99-78ed-4113-bfdb-7bbbbbdbbbfb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9debdc48-469d-44b3-97ed-ed1b63afe414 # Margin Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4f70668-3d4c-4d7f-b6f1-89111ac9fe72
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07ca4a68-c088-41ab-ad3b-ec9eb543d4b7 # Margin Bot
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfd517e5-476b-4e81-aaf3-ae0ff4ac1891
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4 # Block ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c60c680a-89b3-44e7-9fdd-4eb4a7433165
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: af05febf-8e84-4bd4-847c-b221ca2c5747
+        userCondition: null
+group: 7a38f408-160a-4f54-9acd-dca1bd383059 # Unique Blocks
+groupChildBlockTypes: true
+handle: blogs
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Blogs
+sortOrder: 9
+topLevel: true

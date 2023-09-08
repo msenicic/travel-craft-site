@@ -1,0 +1,23 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+
+
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+
+
+    <style>
+        {% if marginTop != 'default' %}
+            #{{ id }} {
+                margin-top: {{ marginData[marginTop] }};
+            }
+        {% endif %}
+        {% if marginBot != 'default' %}
+            #{{ id }} {
+                margin-bottom: {{ marginData[marginBot] }};
+            }
+        {% endif %}
+    </style>
+</section>

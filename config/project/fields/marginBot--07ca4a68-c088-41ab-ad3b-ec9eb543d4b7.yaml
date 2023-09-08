@@ -1,0 +1,67 @@
+columnSuffix: slpqibcs
+contentColumnType: string
+fieldGroup: a288c275-3757-471e-82da-49a45b8ef3bc # Common
+handle: marginBot
+instructions: null
+name: 'Margin Bot'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - None
+        -
+          - value
+          - none
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Small
+        -
+          - value
+          - small
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Medium
+        -
+          - value
+          - medium
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Large
+        -
+          - value
+          - large
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Extra Large'
+        -
+          - value
+          - extraLarge
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

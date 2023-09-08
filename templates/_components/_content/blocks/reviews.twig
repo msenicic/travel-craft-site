@@ -1,0 +1,102 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+{% set title           = block.text %}
+{% set comments        = craft.entries().section('reviews').all() %}
+{% set customComments  = block.customComments.all() %}
+
+{% if customComments %}
+    {% set comments = customComments %}
+{% endif %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        <div class="title">
+            <h1>{{title}}</h1>
+        </div>
+        {% if customComments %}
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for comment in comments %}
+                {% set text       = comment.text %}
+                {% set username   = comment.author.username %}
+                {% set image      = comment.author.photo %}
+                {% set proffesion = comment.author.userProffesion %}
+                <div class="swiper-slide block">
+                    <div class="text">
+                        <p>{{ text }}</p>
+                    </div>
+                    <div class="image">
+                        {% if image %}
+                            <img src="{{ image.url }}" alt="">
+                        {% else %}
+                            <img src="/user.svg" alt="">
+                        {% endif %}
+                        <div class="actor">
+                            <h4>{{ username }}</h4>
+                            <p>{{ proffesion }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div class="blocks">
+            {% for comment in comments %}
+                {% set text       = comment.text %}
+                {% set username   = comment.author.username %}
+                {% set image      = comment.author.photo %}
+                {% set proffesion = comment.author.userProffesion %}
+                <div class="block">
+                    <div class="text">
+                        <p>{{ text }}</p>
+                    </div>
+                    <div class="image">
+                        {% if image %}
+                            <img src="{{ image.url }}" alt="">
+                        {% else %}
+                            <img src="/user.svg" alt="">
+                        {% endif %}
+                        <div class="actor">
+                            <h4>{{ username }}</h4>
+                            <p>{{ proffesion }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

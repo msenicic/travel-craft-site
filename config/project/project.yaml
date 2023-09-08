@@ -1,0 +1,150 @@
+dateModified: 1687456294
+email:
+  fromEmail: markomare.senicic@gmail.com
+  fromName: 'Craft Project'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
+meta:
+  __names__:
+    0d570024-42e4-41c5-9edb-946cb750c906: 'Link button' # Link button
+    0df75172-2b93-4b1c-a00d-1b7c7bc3a47f: Blog # Blog
+    1b8b8cbc-3d2c-41bc-8ba2-1963284864f9: Image # Image
+    01fce43f-ed20-4b5e-be36-71d7328c231d: 'Logo Text' # Logo Text
+    1fee1527-502a-4147-9819-2596df9cc26a: 'Have Logo' # Have Logo
+    2a00807c-a807-4baa-b243-e69bf731fde2: 'Link Button' # Link Button
+    2f34c71a-7eca-4b32-82cf-f9329a7d90f5: 'Link Button' # Link Button
+    03bc19d0-35aa-4908-aeba-a0c2fe262438: 'Heading Normal' # Heading Normal
+    3dcf6dd4-cf4d-4453-b6a6-80b795f3f005: Heading # Heading
+    5a0bf772-000c-4b58-a550-3d93851d7301: Price # Price
+    5e271a39-2eb0-4384-9b6d-13a73d5076c9: 'Craft Project' # Craft Project
+    6d02ce07-ac27-4917-ac5c-9d71c8ae60ea: 'Background Color' # Background Color
+    6dbb4ca8-b499-467c-bb00-d5c397693cbb: 'Footer Navigation' # Footer Navigation
+    6f10e86d-54c4-4469-bc5a-65600177686e: Navigation # Navigation
+    7a38f408-160a-4f54-9acd-dca1bd383059: 'Unique Blocks' # Unique Blocks
+    07ca4a68-c088-41ab-ad3b-ec9eb543d4b7: 'Margin Bot' # Margin Bot
+    7d72d0d3-2bc0-4e3d-a4aa-9abbcedd4add: Heading # Heading
+    7fda0ac4-94ee-464a-ae02-595f16739e74: Home # Home
+    8a07a610-7590-48f3-8cde-90f8ab0ed7bd: Packages # Packages
+    8c22b9c3-be33-42da-a195-63f7c4a1de4c: Forms # Forms
+    9d4a96cf-b1fa-4023-92b9-c4c15cbc6c7c: 'Background Image' # Background Image
+    9d823577-d79f-4627-a647-7e0e58a7cadf: 'Craft Project' # Craft Project
+    9debdc48-469d-44b3-97ed-ed1b63afe414: 'Margin Top' # Margin Top
+    11f796f9-b969-4d37-a786-d1d222e62cf7: 'Page Header' # Page Header
+    15b6db05-396c-4e43-9f92-859a7e7d946a: Register # Register
+    45b21dac-da45-4595-9881-3dc9a2a62260: Lightswitch # Lightswitch
+    46dff903-a86c-4330-a1e4-99bb69d5e363: 'Menu Items' # Menu Items
+    53dde43f-5264-437f-8d90-6cbb4de52a69: 'Idea Text' # Idea Text
+    56a2d51e-a30c-400f-8a11-8d1d2c1903b4: 'Module ID' # Module ID
+    56d90f3d-4fa0-49a0-bb41-4f81bdf20234: Sponsors # Sponsors
+    58bdac0c-7c08-4f82-b3cd-a9c05a7854e7: Nav # Nav
+    59a099bc-b51e-4d9a-9f5d-02b848a11aa5: Text # Text
+    60d0cf0b-c116-4883-acf1-6b7892214209: Text # Text
+    61c7b147-937e-4d4e-803f-d38b9d2e3165: 'Custom Entries' # Custom Entries
+    73a7e511-9235-4e0b-9425-2450143b3b40: Reviews # Reviews
+    87bebe67-faad-4cdb-b889-3b997f6dfbf0: Home # Home
+    90fd07c6-59d3-466c-9823-8651ca288edb: Images # Images
+    99f8271b-1311-4de8-b486-6fc99eacf708: Heading # Heading
+    128d62b5-90de-4899-a2fe-a2cc0fceb24c: 'Common Blocks' # Common Blocks
+    151f09ec-5244-48fd-be8c-3f3d27e3e778: 'Adventure Ideas' # Adventure Ideas
+    197fb598-1d47-4fbc-a183-98813d82af18: 'Public Pages' # Public Pages
+    276c0ec6-4e62-47e5-b726-33ed960ca0fa: Default # Default
+    287abf6a-626b-4c37-bec0-3eca053780ae: item # item
+    354f351d-94d7-436d-a388-759b1d3eb4ea: Profile # Profile
+    393b6ab7-ee65-4ffb-9e54-6f5a1e1a8182: Network # Network
+    453e16be-f495-4881-9e6a-c74e2679828e: 'Social Network' # Social Network
+    563e29b0-4094-40d7-b577-ba2b9367c0b1: 'Search Results' # Search Results
+    584f369e-be42-4afb-9cf8-844cbe469243: 'Background Image' # Background Image
+    651c6f11-7a0d-4318-bb73-ea8c6ab2655a: 'Page Content' # Page Content
+    660e1654-5c13-408e-8df6-00275f063180: Number # Number
+    846d94d3-d276-4d70-b54b-9274f825aa08: Subscribers # Subscribers
+    0957c6b0-e10a-41b0-933b-248454074bc8: Price # Price
+    2037ce97-ae6d-4fa5-b9c8-7dd839bc45f1: 'User Proffesion' # User Proffesion
+    3761f60c-84c2-473e-a2b9-9ae30b1eda07: 'Image Text' # Image Text
+    4628d87e-22d9-499b-bdf9-18a837b2836b: 'Icon Link' # Icon Link
+    7706db96-7ecb-4a0d-b973-607acd0101f3: Redactor # Redactor
+    9856e0d1-693b-4017-b5d3-314e82a72a12: Heading # Heading
+    9986c321-25b5-420f-a85c-6390e630c644: 'Public Pages' # Public Pages
+    36142baf-2ca2-4448-839c-110ccb604b3e: 'Super Table' # Super Table
+    90192a9c-1126-4891-bbf9-aec63fa23dfe: 'Navigation Heading' # Navigation Heading
+    6117931f-276f-4064-a1c9-613e6f38d3cd: 'Normal Link' # Normal Link
+    52904033-ab0f-4a71-8221-5ef59ffa7450: Package # Package
+    58031212-9000-4332-8281-71144231bc23: 'Image Slider' # Image Slider
+    a7a39547-9c0c-4ec7-82fd-63fd5cc45d23: 'Icon type' # Icon type
+    a125d0f8-024f-4966-b8a0-f3874154b897: 'Idea Image' # Idea Image
+    a288c275-3757-471e-82da-49a45b8ef3bc: Common # Common
+    a816a4f4-1319-457f-a1fb-206ccc6e5ba9: 'Link Button' # Link Button
+    a5663fba-c59f-43b0-bf33-8df7b7f0a36a: Navigation # Navigation
+    abe8a1bd-e7e4-4790-bf1a-d3f90d6efe75: Text # Text
+    af33e66c-a973-4f96-b1bf-dbc5ccf88f79: 'Module ID' # Module ID
+    afcdaea6-ec0a-480a-9ebf-e7ba3d0d8698: Comment # Comment
+    b0172675-625c-4d4e-bf8e-b90d37d55302: Image # Image
+    b4ee4300-a5c0-4b60-bb40-757a64bfb440: 'Site Logo' # Site Logo
+    b5de4b3b-8791-479a-a53d-8302460d36c7: 'Adventure Idea' # Adventure Idea
+    b432d571-12c2-4f85-b6bf-9dc5dd63aaaf: 'Idea Heading' # Idea Heading
+    baeb5c2f-3847-4906-ab17-bcad86cc6274: 'Short Description' # Short Description
+    bc16f8c8-8613-4853-8578-a9b18e8c178c: Reviews # Reviews
+    bccdbf1c-5758-4597-81a7-d54c4b1617fd: 'Site Settings' # Site Settings
+    bdd610fd-4aea-474f-9338-cc48f435a952: 'Custom Comments' # Custom Comments
+    c02b030d-4e72-42ef-8ca8-53e012c89f9c: 'Reset Password' # Reset Password
+    c2b558a5-f90d-4fab-b4b7-08dfa050dc27: Products # Products
+    c3c0fa83-cebd-4340-a4c1-264a8631a743: Ideas # Ideas
+    c9aadfe7-339a-43d8-ad15-5d693b0ee6dd: Text # Text
+    c33f54a4-add6-41b4-b0f5-823aac0552b7: Slider # Slider
+    c4161a8a-f6b0-4d54-8e1b-afc8e09b1560: Image # Image
+    c4247688-c603-4b93-9cee-6d048792716f: Images # Images
+    cb551f89-c094-4bae-b995-1cf1f2a3fd1b: 'Site Settings' # Site Settings
+    cd018bbe-d015-4ae4-b157-f33fab1231b3: 'Nav item' # Nav item
+    d1b44e95-b36d-41e6-b34a-9438d69a734b: Login # Login
+    d55fa88d-a32f-4362-bf12-fa364cf75c34: 'Short Description' # Short Description
+    d82f4ec7-6a43-493d-b779-58ff5bb93ccb: 'Normal Link' # Normal Link
+    d382e179-d7c1-423e-8a14-dc32fed18fc8: 'Public Schema' # Public Schema
+    d4749795-9b4b-4291-b17c-df4c871af5c4: 'Footer Bg Image' # Footer Bg Image
+    e2aee64d-6a42-4524-a25a-6a45ef8f177c: Image # Image
+    e2d465f2-3eb9-4887-bcbc-dd106e39d4b0: 'Site Settings' # Site Settings
+    e69d6ef5-b094-4dfc-902f-85027de74a64: 'Icon Link' # Icon Link
+    e3008aa3-4cb5-4a69-a384-56c230019e7b: 'Link For Network' # Link For Network
+    efeb048d-b9d8-49f0-bc28-de9256f2e2ec: 'Heading Bold' # Heading Bold
+    f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4: 'Block ID' # Block ID
+    f71e64c6-b92d-4fd1-a38b-63e163a6c6d0: 'Module ID' # Module ID
+    f4493c69-b9a3-4405-b16b-548b761f6898: Users # Users
+    f99922b4-1e92-4153-91b7-d51b53957a54: Blogs # Blogs
+    f2909914-74c9-46fc-ab24-603c18fcac20: Text # Text
+    ffab6b83-5f9e-4a37-bc3b-77cc1863e590: Link # Link
+plugins:
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: 9MOFZL34PTYJYTVUEXYT866K
+    schemaVersion: 3.6.2
+    settings:
+      blockTypeIconSources: '*'
+      collapseAllBlocks: false
+      defaultAlwaysShowGroupDropdowns: true
+      enableBlockTypeUserPermissions: true
+      newBlockMenuStyle: classic
+      optimiseSearchIndexing: true
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: pro
+  live: true
+  name: 'Craft Project'
+  schemaVersion: 4.4.0.4
+  timeZone: America/Los_Angeles

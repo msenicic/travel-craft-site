@@ -1,0 +1,94 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+fieldLayouts:
+  42851b53-7da4-4ba6-bea0-bf5266bf085b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 90fd07c6-59d3-466c-9823-8651ca288edb # Images
+            instructions: null
+            label: 'Image Slider'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b830e381-23bb-4e03-ba60-77cb36ea0ca7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eed83868-a6e7-4614-93e3-b07a7b94f112
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d02ce07-ac27-4917-ac5c-9d71c8ae60ea # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0211ac3-00fb-4319-a3a6-211d13bea8bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9debdc48-469d-44b3-97ed-ed1b63afe414 # Margin Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 167d8ee8-4fc8-4119-b84e-8d22182bbc89
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07ca4a68-c088-41ab-ad3b-ec9eb543d4b7 # Margin Bot
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2cfb799b-db67-443e-ad2d-b22d24dd3682
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4 # Block ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2134e26f-ef6d-4000-b3c9-077a90999b1f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 1a26aee6-07ed-4a22-9ed8-fab46e15c37a
+        userCondition: null
+group: 7a38f408-160a-4f54-9acd-dca1bd383059 # Unique Blocks
+groupChildBlockTypes: true
+handle: sponsors
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Sponsors
+sortOrder: 7
+topLevel: true

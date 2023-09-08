@@ -1,0 +1,77 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+{% set section = craft.app.sections.getSectionByHandle('reviews') %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        <div class="title">
+            <h1>Comment</h1>
+        </div>
+        {% if currentUser %}
+            <div class="text">
+                <p>Leave a comment</p>
+            </div>
+            {% macro errorList(errors) %}
+                {% if errors %}
+                    {{ ul(errors, {class: 'errors'}) }}
+                {% endif %}
+            {% endmacro %}
+
+            {% set entry = entry ?? create('craft\\elements\\Entry') %}
+
+            <form method="post" accept-charset="UTF-8">
+                {{ csrfInput() }}
+                {{ actionInput('entries/save-entry') }}
+                {{ hiddenInput('sectionId', section.id) }}
+                {{ hiddenInput('enabled', true) }}
+                {{ tag('textarea', {
+                    placeholder: "Leave a comment",
+                    name: 'fields[text]',
+                    text: entry.text,
+                }) }}
+                {{ _self.errorList(entry.getErrors('text')) }}
+
+                <button type="submit">Publish</button>
+            </form>
+        {% else %}
+            <div class="text">
+                <p>
+                    You must <a href="{{ siteUrl }}user/login">Log In</a> if you want to comment our page
+                </p>
+            </div>
+        {% endif %}
+    </div>
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

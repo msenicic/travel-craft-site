@@ -1,0 +1,19 @@
+columnSuffix: jmhdwodp
+contentColumnType: text
+fieldGroup: cb551f89-c094-4bae-b995-1cf1f2a3fd1b # Site Settings
+handle: logoText
+instructions: 'Enter text instead of logo'
+name: 'Logo Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

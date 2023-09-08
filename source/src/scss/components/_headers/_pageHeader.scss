@@ -1,0 +1,120 @@
+.page-header {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  .swiper {
+    height: 100%;
+    width: 100%;
+
+    .swiper-slide {
+      height: 100%;
+      background-size: cover;
+      background-position: right;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(even) {
+        background-position: left;
+      }
+
+      @include media-up(l) {
+        background-position: center;
+
+        &:nth-child(odd) {
+          justify-content: flex-end;
+        }
+
+        &:nth-child(even) {
+          justify-content: flex-start;
+        }
+      }
+
+      .text {
+        text-align: center;
+        text-transform: capitalize;
+        max-width: 500px;
+        margin: 0 20px;
+
+        @include media-up(l) {
+          text-align: left;
+          margin: 0 60px 0 120px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 2;
+
+          @include media-up(l) {
+            font-size: 16px;
+          }
+        }
+
+        h1 {
+          text-transform: uppercase;
+          color: $title-color;
+          font-size: 35px;
+          margin: 5px 0;
+
+          @include media-up(l) {
+            font-size: 50px;
+          }
+        }
+
+        p:nth-child(1) {
+          font-size: 26px;
+          line-height: 1;
+
+          @include media-up(l) {
+            font-size: 35px;
+          }
+        }
+
+        .button {
+          margin-top: 30px;
+
+          a {
+            padding: 10px 25px;
+            border: 1px solid $text-color;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: $text-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &.fa-chevron-right {
+      right: 10px;
+    }
+
+    &.fa-chevron-left {
+      left: 10px;
+    }
+
+    &:hover {
+      color: $title-color;
+    }
+
+    @include media-up(m) {
+      opacity: 1;
+    }
+  }
+}

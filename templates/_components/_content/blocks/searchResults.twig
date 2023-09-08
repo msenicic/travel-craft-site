@@ -1,0 +1,54 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <h1>Search Results</h1>
+
+    {% set searchQuery = craft.app.request.getParam('q') %}
+    {% set entries = craft.entries().search(searchQuery).section('publicPages').all() %}
+
+    {% if entries|length %}
+    <p>{{ entries|length }} results:</p>
+
+    <ul>
+        {% for entry in entries %}
+        <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
+    {% endif %}
+
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

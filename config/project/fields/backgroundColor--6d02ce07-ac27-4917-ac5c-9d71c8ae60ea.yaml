@@ -1,0 +1,12 @@
+columnSuffix: ydcsaqiu
+contentColumnType: string(7)
+fieldGroup: a288c275-3757-471e-82da-49a45b8ef3bc # Common
+handle: backgroundColor
+instructions: null
+name: 'Background Color'
+searchable: false
+settings:
+  defaultColor: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

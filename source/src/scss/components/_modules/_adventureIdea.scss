@@ -1,0 +1,37 @@
+.adventureIdea {
+    padding: 0 20px;
+    text-align: center;
+
+    .title {
+        margin-bottom: 40px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+
+            @include media-up(l) {
+                font-size: 38px;
+            }
+        }
+    }
+
+    .content {
+        .image {
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 30px;
+        
+            img {
+                object-fit: cover;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        .text {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{% set siteLogo = siteSettings.siteLogo.one() %}
+{% set logoText = siteSettings.logoText %}
+{% set haveLogo = siteSettings.haveLogo %}
+
+<header id="header" class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ siteUrl }}">
+                {% if haveLogo %}
+                    <img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}">
+                {% else %}
+                    <i class="fas fa-hiking"></i><span>{{ logoText }}</span>
+                {% endif %}
+            </a>
+        </div>
+        {% include "_layouts/_nav" %}
+        <div class="icons">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="search">
+            <i class="fas fa-times"></i>
+            <form action="{{ url('search') }}">
+                <input type="search" name="q" aria-label="Search" id="search" placeholder="search here...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</header>

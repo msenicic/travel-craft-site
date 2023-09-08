@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: a288c275-3757-471e-82da-49a45b8ef3bc # Common
+handle: pageHeader
+instructions: null
+name: 'Page Header'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 884022229
+  columns:
+    __assoc__:
+      -
+        - 9d4a96cf-b1fa-4023-92b9-c4c15cbc6c7c # Background Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 03bc19d0-35aa-4908-aeba-a0c2fe262438 # Heading Normal
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - efeb048d-b9d8-49f0-bc28-de9256f2e2ec # Heading Bold
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c9aadfe7-339a-43d8-ad15-5d693b0ee6dd # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0d570024-42e4-41c5-9edb-946cb750c906 # Link button
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_pageheader}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

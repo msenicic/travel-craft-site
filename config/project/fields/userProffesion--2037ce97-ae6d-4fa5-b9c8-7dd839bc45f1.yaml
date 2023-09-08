@@ -1,0 +1,19 @@
+columnSuffix: pmxprmlv
+contentColumnType: text
+fieldGroup: f4493c69-b9a3-4405-b16b-548b761f6898 # Users
+handle: userProffesion
+instructions: null
+name: 'User Proffesion'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

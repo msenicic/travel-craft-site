@@ -1,0 +1,19 @@
+columnSuffix: fmvynjnl
+contentColumnType: text
+fieldGroup: a288c275-3757-471e-82da-49a45b8ef3bc # Common
+handle: text
+instructions: null
+name: Text
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

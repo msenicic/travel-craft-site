@@ -1,0 +1,8 @@
+description: ''
+handle: subscribers
+name: Subscribers
+permissions:
+  - 'createentries:73a7e511-9235-4e0b-9425-2450143b3b40' # Reviews
+  - 'deleteentries:73a7e511-9235-4e0b-9425-2450143b3b40' # Reviews
+  - 'saveentries:73a7e511-9235-4e0b-9425-2450143b3b40' # Reviews
+  - 'viewentries:73a7e511-9235-4e0b-9425-2450143b3b40' # Reviews

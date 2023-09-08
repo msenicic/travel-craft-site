@@ -1,0 +1,66 @@
+{% set footerBgImage    = siteSettings.footerBgImage.one() %}
+{% set footerNavigation = siteSettings.footerNavigation.all() %}
+
+<footer id="footer" class="site-footer" role="contentinfo" {% if footerBgImage %}
+    style="background-image: url({{ footerBgImage.url }});" {% endif %}>
+    <div class="container">
+        <div class="links">
+            {% if footerNavigation | length %}
+                {% for footer in footerNavigation %}
+                    {% set title      = footer.navigationHeading %}
+                    {% set navigation = footer.navigation.all() %}
+                    <div class="block">
+                        <div class="title">
+                            <h2>{{ title }}</h2>
+                        </div>
+                        <div class="list">
+                            <ul>
+                            {% if navigation | length %}
+                                {% for links in navigation %}
+                                    {% if links.type == "socialNetwork" %}
+                                        {% set network = links.network %}
+                                        {% set link    = links.linkForNetwork %}   
+                                        <li>
+                                            {% if network == "facebook" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fab fa-facebook-f"></i>Facebook</a>
+                                            {% elseif network == "instagram" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fab fa-instagram"></i>Instagram</a>
+                                            {% elseif network == "linkedin" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fab fa-linkedin-in"></i>Linkedin</a>
+                                            {% elseif network == "twitter" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fab fa-twitter"></i>Twitter</a>
+                                            {% elseif network == "github" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fab fa-github"></i>Github</a>
+                                            {% endif %}
+                                        </li>
+                                    {% elseif links.type == "iconLink"%}
+                                        {% set type = links.iconType %}
+                                        {% set link = links.iconLink %}
+                                        <li>
+                                            {% if type == "telephone" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fas fa-phone"></i>{{ link.getText('') }}</a>
+                                            {% elseif type == "mail" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fas fa-envelope"></i>{{ link.getText('') }}</a>
+                                            {% elseif type == "map" %}
+                                                <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}"><i class="fas fa-map"></i>{{ link.getText('') }}</a>
+                                            {% endif %}
+                                        </li>
+                                    {% else %}
+                                        {% set link = links.normalLink %}
+                                        <li>
+                                            <a href="{{ link.getUrl() }}" target="{{ link.getTarget() }}">{{ link.getText('') }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="text">
+            <p>Created by <span>Slama</span> | All rights reserved!</p>
+        </div>
+    </div>
+</footer>

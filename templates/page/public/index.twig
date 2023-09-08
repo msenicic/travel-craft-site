@@ -1,0 +1,14 @@
+{% set bodyClass  = 'public-page' %}
+{% set pageHeader = entry.lightswitch %}
+
+{% extends "_layouts/base" %}
+
+{% block main %}
+    {% if pageHeader %}
+        {% include '_components/_headers/pageHeader' %}
+    {% endif %}
+    <div class="page-wrapper {# _wr #}">
+        {% include '_components/_content/content' %}
+    </div>
+
+{% endblock %}

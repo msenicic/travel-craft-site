@@ -1,0 +1,53 @@
+{% set marginTop  = block.marginTop.value %}
+{% set marginBot  = block.marginBot.value %}
+{% set blockId    = block.blockId %}
+{% set id         = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+{% set image            = block.image.one() %}
+{% set imageOnRightSide = block.lightswitch %}
+{% set redactor         = block.redactor %}
+{% set linkButton       = block.linkField %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container {% if imageOnRightSide %} reverse {% endif %}">
+        <div class="image">
+            <img src="{{ image.url }}" alt="">
+        </div>
+        <div class="text">
+            {{ redactor }}
+            <div class="button">
+                <a href="{{ linkButton.getUrl() }}" target="{{ linkButton.getTarget() }}">{{ linkButton.getText('') }}</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

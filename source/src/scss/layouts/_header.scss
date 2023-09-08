@@ -1,0 +1,137 @@
+header {
+  padding: 20px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: 0.5s;
+  font-size: 22px;
+
+  @include media-up(xl) {
+    padding: 20px 5%;
+    font-size: 25px;
+  }
+
+  &.active {
+    background-color: #fff;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+
+      @include media-up(xl) {
+        font-size: 25px;
+      }
+      
+      a {
+        transition: 0.5s;
+
+        &:hover {
+          color: $title-color;
+        }
+
+        i {
+          margin-right: 10px;
+          color: $title-color;
+        }
+  
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+
+      .fas {
+        transition: 0.5s;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        } 
+        
+        &:hover {
+          color: $title-color;
+          cursor: pointer;
+        }
+
+        &.fa-bars {
+          @include media-up(m) {
+            display: none;
+          }
+        }
+      }      
+    }
+
+    .search {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000cc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      transform: translateY(-100%);
+      transition: 0.5s;
+
+      &.active {
+        z-index: 1001;
+        transform: translateY(0);
+      }
+
+      i {
+        color: #fff;
+        transition: 0.5s;
+
+        &:hover {
+          color: $title-color;
+          cursor: pointer;
+        }
+      }
+
+      .fa-times {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 50px;
+      }
+
+      form {
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        max-width: 700px;
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          color: #fff;
+        }
+
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

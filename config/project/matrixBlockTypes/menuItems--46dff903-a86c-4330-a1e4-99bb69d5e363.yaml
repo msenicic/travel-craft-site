@@ -1,0 +1,61 @@
+field: 6f10e86d-54c4-4469-bc5a-65600177686e # Navigation
+fieldLayouts:
+  b8b35716-899a-457f-9568-f1919877af24:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 287abf6a-626b-4c37-bec0-3eca053780ae # item
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f421a94b-9dd9-4384-b8ff-74680ff1031e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1c2493dd-949f-4bbc-9b84-cf0492be9b68
+        userCondition: null
+fields:
+  287abf6a-626b-4c37-bec0-3eca053780ae: # item
+    columnSuffix: nvydswdm
+    contentColumnType: string
+    fieldGroup: null
+    handle: item
+    instructions: 'Add page'
+    name: item
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: menuItems
+name: 'Menu Items'
+sortOrder: 1

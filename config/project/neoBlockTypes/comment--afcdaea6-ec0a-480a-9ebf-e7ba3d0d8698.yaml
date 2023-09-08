@@ -1,0 +1,90 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+fieldLayouts:
+  09e935a5-c5e4-4954-be7f-4384aaf9d732:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Everything will be automatically displayed.'
+            type: craft\fieldlayoutelements\Tip
+            uid: 1e963658-6754-41e1-a702-7a178991edb0
+            userCondition: null
+        name: Content
+        uid: c9ba9f9a-8c7a-4e73-ad66-664e0a9661c5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d02ce07-ac27-4917-ac5c-9d71c8ae60ea # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c724623-78f9-4dd1-a076-64be4781df0c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9debdc48-469d-44b3-97ed-ed1b63afe414 # Margin Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4c38990-9930-42b9-bfa9-d39f1f484338
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07ca4a68-c088-41ab-ad3b-ec9eb543d4b7 # Margin Bot
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8c1e1a7-59cc-440e-8039-dd685d996bea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4 # Block ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c685957-1e3e-43c3-acb4-2f1081fb5521
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 76023052-6c80-4b14-b1be-cd56e1b36fe8
+        userCondition: null
+group: 8c22b9c3-be33-42da-a195-63f7c4a1de4c # Forms
+groupChildBlockTypes: true
+handle: comment
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Comment
+sortOrder: 19
+topLevel: true

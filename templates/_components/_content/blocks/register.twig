@@ -1,0 +1,82 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, {class: 'errors'}) }}
+            {% endif %}
+        {% endmacro %}
+
+        {# `user` is defined if the form returns validation errors. #}
+        {% set user = user ?? null %}
+
+        <form method="post" accept-charset="UTF-8">
+            {{ csrfInput() }}
+            {{ actionInput('users/save-user') }}
+            {{ redirectInput('user/login') }}
+
+            <label for="username">Username</label>
+            {{ input('text', 'username', user.username ?? null, {
+                id: 'username',
+                autocomplete: 'username',
+            }) }}
+            {{ user ? _self.errorList(user.getErrors('username')) }}
+
+            <label for="userProffesion">Proffesion</label>
+            {{ input('text', 'fields[userProffesion]', user.userProffesion ?? null, {
+                id: 'userProffesion',
+                autocomplete: 'userProffesion',
+            }) }}
+            {{ user ? _self.errorList(user.getErrors('userProffesion')) }}
+
+            <label for="email">Email</label>
+            {{ input('email', 'email', user.email ?? null, {
+                id: 'email',
+                autocomplete: 'email',
+            }) }}
+            {{ user ? _self.errorList(user.getErrors('email')) }}
+
+            <label for="password">Password</label>
+            {{ input('password', 'password', null, {
+                id: 'password',
+            }) }}
+            {{ user ? _self.errorList(user.getErrors('password')) }}
+
+            <button>Register</button>
+        </form>
+    </div>
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

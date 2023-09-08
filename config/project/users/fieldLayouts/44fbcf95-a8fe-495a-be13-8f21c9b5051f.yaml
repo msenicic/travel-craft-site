@@ -1,0 +1,19 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        elementCondition: null
+        fieldUid: 2037ce97-ae6d-4fa5-b9c8-7dd839bc45f1 # User Proffesion
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 4722eef9-a77d-404e-aa71-32a2dd9e8ee5
+        userCondition: null
+        warning: null
+        width: 100
+    name: 'More Information'
+    uid: a1e760f2-5bc2-4720-bcfd-063144cfbb1a
+    userCondition: null

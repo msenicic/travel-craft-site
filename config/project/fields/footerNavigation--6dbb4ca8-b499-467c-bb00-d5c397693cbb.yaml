@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: cb551f89-c094-4bae-b995-1cf1f2a3fd1b # Site Settings
+handle: footerNavigation
+instructions: null
+name: 'Footer Navigation'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1947723056
+  columns:
+    __assoc__:
+      -
+        - 55444588-f3bc-4f63-ad06-73d99f81a267
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 4adb23fa-5647-483b-b85d-4a98922d8ded
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_footernavigation}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

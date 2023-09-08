@@ -1,0 +1,94 @@
+fieldLayouts:
+  7bb0f7d2-d2db-4f22-964a-e420ed893d20:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 45b21dac-da45-4595-9881-3dc9a2a62260 # Lightswitch
+            instructions: null
+            label: 'Want Page Header on this page?'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11924ed5-a9d4-4724-8359-af818afdf6a0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 45b21dac-da45-4595-9881-3dc9a2a62260 # Lightswitch
+                  uid: 0030ffe0-a010-42cd-b825-cd686be3e633
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 11f796f9-b969-4d37-a786-d1d222e62cf7 # Page Header
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5a33b30-6a08-4b6d-a9f7-8b97afc731a2
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Page Header'
+        uid: c7f8694e-7874-4362-ab0d-b4d50f9d75f7
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9e604285-5fcc-42dc-9992-594277bebf7b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 706a8b8f-f4e9-44dd-bee9-d737fe7bd708
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ae40f985-a0bc-4932-bcbd-a7e1ffe3846c
+        userCondition: null
+handle: publicPages
+hasTitleField: true
+name: 'Public Pages'
+section: 197fb598-1d47-4fbc-a183-98813d82af18 # Public Pages
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

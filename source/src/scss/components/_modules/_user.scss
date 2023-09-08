@@ -1,0 +1,38 @@
+.profile, .register, .resetPassword, .login {
+    padding: 0 20px;
+    text-align: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input:not(:last-child) {
+            margin-bottom: 15px;
+            outline: none;
+            padding: 10px 5px;
+        }
+
+        button {
+            border: 1px solid #000;
+            outline: none;
+            padding: 10px 20px;
+            background-color: #000;
+            transition: 0.5s;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            margin: 15px 0;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+}

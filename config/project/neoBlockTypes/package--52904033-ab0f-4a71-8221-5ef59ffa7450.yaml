@@ -1,0 +1,130 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+fieldLayouts:
+  8a707418-6067-4721-b7f0-ee4f8399a33f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1b8b8cbc-3d2c-41bc-8ba2-1963284864f9 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76476da6-0d95-451d-b072-5cdbbc97046e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7706db96-7ecb-4a0d-b973-607acd0101f3 # Redactor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 38a1b2f0-9426-40a0-8984-c9e7223e7452
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5a0bf772-000c-4b58-a550-3d93851d7301 # Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6025a03-ac8c-4975-9341-ca3f6056e5aa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: baeb5c2f-3847-4906-ab17-bcad86cc6274 # Short Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 614798d5-8c28-40c1-9158-a860b417eda8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 82709461-04ce-4af6-9966-e6b5455807ea
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d02ce07-ac27-4917-ac5c-9d71c8ae60ea # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 649edae1-4dcd-447b-9b7d-4538641da2a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9debdc48-469d-44b3-97ed-ed1b63afe414 # Margin Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 13c964eb-b2cb-43c0-be7d-1c74d9a896a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07ca4a68-c088-41ab-ad3b-ec9eb543d4b7 # Margin Bot
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d53717c-fe43-4634-a3d2-0c1f693f976d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4 # Block ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c848140-53c3-4c00-b0ab-69429ca39d35
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 3e2a9a16-3b9c-4f4a-8629-219876d4246a
+        userCondition: null
+group: c2b558a5-f90d-4fab-b4b7-08dfa050dc27 # Products
+groupChildBlockTypes: true
+handle: package
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Package
+sortOrder: 11
+topLevel: true

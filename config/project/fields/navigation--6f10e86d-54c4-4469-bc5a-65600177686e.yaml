@@ -1,0 +1,30 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: cb551f89-c094-4bae-b995-1cf1f2a3fd1b # Site Settings
+handle: navigation
+instructions: 'Enter menu items'
+name: Navigation
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 246427664
+  columns:
+    __assoc__:
+      -
+        - cd018bbe-d015-4ae4-b157-f33fab1231b3 # Nav item
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_navigation}}'
+  fieldLayout: table
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

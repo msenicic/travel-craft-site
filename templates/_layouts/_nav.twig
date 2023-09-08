@@ -1,0 +1,14 @@
+{% set navigation  = siteSettings.navigation.all() %}
+
+{% if navigation | length %}
+    <nav class="site-nav">
+        <ul class="js-main-menu menu">
+            {% for menuItem in navigation %}
+                <li>
+                    <a href="{{ menuItem.navItem.getUrl() }}" target="{{ menuItem.navItem.getTarget() }}">{{ menuItem.navItem.getText('') }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <i class="fas fa-times"></i>
+    </nav>
+{% endif %}

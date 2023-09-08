@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: reviews
+name: Reviews
+propagationMethod: all
+siteSettings:
+  5e271a39-2eb0-4384-9b6d-13a73d5076c9: # Craft Project
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

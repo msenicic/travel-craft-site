@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: publicPages
+name: 'Public Pages'
+propagationMethod: all
+siteSettings:
+  5e271a39-2eb0-4384-9b6d-13a73d5076c9: # Craft Project
+    enabledByDefault: true
+    hasUrls: true
+    template: page/public/
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: 2
+  uid: ba2693aa-2e0e-4a5e-8612-a42d4332847c
+type: structure

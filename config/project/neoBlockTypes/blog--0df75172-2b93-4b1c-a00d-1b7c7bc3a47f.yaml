@@ -1,0 +1,118 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 651c6f11-7a0d-4318-bb73-ea8c6ab2655a # Page Content
+fieldLayouts:
+  24ecb8ab-1833-42b5-ab7f-2fc0b7ddb6b7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1b8b8cbc-3d2c-41bc-8ba2-1963284864f9 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd140789-91b1-4fd7-823d-458c0d07eea8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7706db96-7ecb-4a0d-b973-607acd0101f3 # Redactor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5643cfc7-7536-4bcc-8f29-9682d9aae24c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: baeb5c2f-3847-4906-ab17-bcad86cc6274 # Short Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cda1da74-435e-4421-89eb-c6d562a563f3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 401675bd-ec91-46c9-80e2-75649bbfb50b
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6d02ce07-ac27-4917-ac5c-9d71c8ae60ea # Background Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c330ce8-3caf-4932-b585-7280eee6d0c2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9debdc48-469d-44b3-97ed-ed1b63afe414 # Margin Top
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ccb8e102-0792-4267-a4c4-5955be82f528
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07ca4a68-c088-41ab-ad3b-ec9eb543d4b7 # Margin Bot
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6984f36-cae5-44e2-9bd2-1b051d5c4d84
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7e27ca0-f4e5-488a-9f7f-8e9eec5604a4 # Block ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fd4f992-1f3a-4e86-8d09-1cbc045570fe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 1fbc0ded-a653-4179-8970-c62629013687
+        userCondition: null
+group: c2b558a5-f90d-4fab-b4b7-08dfa050dc27 # Products
+groupChildBlockTypes: true
+handle: blog
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Blog
+sortOrder: 13
+topLevel: true

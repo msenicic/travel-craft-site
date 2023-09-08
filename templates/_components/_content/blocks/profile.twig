@@ -1,0 +1,140 @@
+{% set marginTop = block.marginTop.value %}
+{% set marginBot = block.marginBot.value %}
+{% set blockId   = block.blockId %}
+{% set id        = blockId ?: 'block-' ~ blockHandle ~ '-' ~ blockIndex %}
+{% set bgColor   = block.backgroundColor %}
+
+<section id="{{ id }}" class="block {{ blockHandle }}">
+    <div class="container">
+        {# Require that a user is logged in to view this form. #}
+        {% requireLogin %}
+
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, {class: 'errors'}) }}
+            {% endif %}
+        {% endmacro %}
+
+        {# If there were any validation errors, a `user` variable will be passed to the
+        template, which contains the posted values and validation errors. If that’s not
+        set, we’ll default to the current user. #}
+        {% set user = user ?? currentUser %}
+
+        {% if user.hasErrors() %}
+            <p>Unable to save your profile.</p>
+        {% endif %}
+
+        <form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+            {{ csrfInput() }}
+            {{ actionInput('users/save-user') }}
+            {{ hiddenInput('userId', user.id) }}
+
+            {# In Craft 4, `firstName` and `lastName` were combined into a single property: #}
+            <label for="full-name">Full Name</label>
+            {{ input('text', 'fullName', user.fullName, {
+                id: 'full-name',
+                class: user.hasErrors('fullName') ? 'error',
+                autocomplete: 'name',
+            }) }}
+            {{ _self.errorList(user.getErrors('fullName')) }}
+
+            {% if user.photo %}
+                <label>Photo</label>
+                {{ user.photo.getImg({width: 150, height: 150})|attr({
+                id: 'user-photo',
+                alt: user.friendlyName,
+                }) }}
+
+                <label for="delete-photo">
+                {{ input('checkbox', 'deletePhoto', '1', {
+                    id: 'delete-photo',
+                }) }}
+                Delete photo
+                </label>
+            {% endif %}
+
+            <label for="photo">Upload a new photo</label>
+            {{ input('file', 'photo', null, {
+                id: 'photo',
+                accept: 'image/png,image/jpeg',
+            }) }}
+
+            {% if not craft.app.config.general.useEmailAsUsername %}
+                <label for="username">Username</label>
+                {{ input('text', 'username', user.username, {
+                id: 'username',
+                class: user.hasErrors('username') ? 'error',
+                autocomplete: 'username',
+                }) }}
+                {{ _self.errorList(user.getErrors('username')) }}
+            {% endif %}
+
+            <label for="email">Email</label>
+            {{ input('text', 'email', user.unverifiedEmail ?? user.email, {
+                id: 'email',
+                class: user.hasErrors('email') ? 'error',
+                autocomplete: 'email',
+            }) }}
+            {{ _self.errorList(user.getErrors('username')) }}
+
+            {% if craft.app.projectConfig.get('users.requireEmailVerification') %}
+                <p>New email addresses need to be verified.</p>
+            {% endif %}
+
+            <label for="new-password">New Password</label>
+            {{ input('password', 'newPassword', null, {
+                id: 'new-password',
+                class: user.hasErrors('newPassword') ? 'error',
+                autocomplete: 'new-password',
+            }) }}
+            {{ _self.errorList(user.getErrors('newPassword')) }}
+
+            <label for="current-password">Current Password</label>
+            {{ input('password', 'password', null, {
+                id: 'current-password',
+                class: user.hasErrors('currentPassword') ? 'error',
+                autocomplete: 'current-password',
+            }) }}
+            {{ _self.errorList(user.getErrors('currentPassword')) }}
+
+            <label for="userProffesion">Proffesion</label>
+            {{ input('text', 'fields[userProffesion]', user.userProffesion, {
+                id: 'userProffesion',
+                class: user.hasErrors('userProffesion') ? 'error',
+                autocomplete: 'userProffesion',
+            }) }}
+            {{ _self.errorList(user.getErrors('userProffesion')) }}
+
+            <button>Save Profile</button>
+        </form>   
+    </div>
+
+    <style>
+        {% if bgColor %}
+            #{{ id }} {
+                background-color: {{ bgColor }};
+            }
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    padding-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    padding-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% else %}
+            {% if marginTop != 'default' %}
+                #{{ id }} {
+                    margin-top: {{ marginData[marginTop] }};
+                }
+            {% endif %}
+            {% if marginBot != 'default' %}
+                #{{ id }} {
+                    margin-bottom: {{ marginData[marginBot] }};
+                }
+            {% endif %}
+        {% endif %}
+    </style>
+</section>

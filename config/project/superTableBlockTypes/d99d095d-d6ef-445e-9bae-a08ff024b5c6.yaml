@@ -1,0 +1,73 @@
+changedFieldIndicator: 181297285
+field: 6dbb4ca8-b499-467c-bb00-d5c397693cbb # Footer Navigation
+fieldLayouts:
+  f83e0435-c74f-4f91-80b4-96a20c38e24a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 90192a9c-1126-4891-bbf9-aec63fa23dfe # Navigation Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: db71b980-679d-4cfa-a6be-25c311334c4a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a5663fba-c59f-43b0-bf33-8df7b7f0a36a # Navigation
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7aa3da61-b540-4c10-bb33-925374300bae
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c0189b34-d1ed-49b8-8cd0-c60c3d3fb2f1
+        userCondition: null
+fields:
+  90192a9c-1126-4891-bbf9-aec63fa23dfe: # Navigation Heading
+    columnSuffix: xwfzritn
+    contentColumnType: text
+    fieldGroup: null
+    handle: navigationHeading
+    instructions: null
+    name: 'Navigation Heading'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a5663fba-c59f-43b0-bf33-8df7b7f0a36a: # Navigation
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navigation
+    instructions: null
+    name: Navigation
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_navigation_1}}'
+      maxBlocks: null
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix

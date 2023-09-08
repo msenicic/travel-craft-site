@@ -1,0 +1,51 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: a288c275-3757-471e-82da-49a45b8ef3bc # Common
+handle: superTable
+instructions: null
+name: 'Super Table'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 612730930
+  columns:
+    __assoc__:
+      -
+        - c4161a8a-f6b0-4d54-8e1b-afc8e09b1560 # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 3dcf6dd4-cf4d-4453-b6a6-80b795f3f005 # Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - f2909914-74c9-46fc-ab24-603c18fcac20 # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2a00807c-a807-4baa-b243-e69bf731fde2 # Link Button
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_supertable}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

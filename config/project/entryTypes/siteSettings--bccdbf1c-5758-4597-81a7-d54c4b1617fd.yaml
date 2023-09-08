@@ -1,0 +1,123 @@
+fieldLayouts:
+  df3e7c93-5655-47b1-bce7-763ba706380a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 1fee1527-502a-4147-9819-2596df9cc26a # Have Logo
+                  uid: cb630b8a-f17a-44bb-9a6f-2b05e8a7a61b
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: b4ee4300-a5c0-4b60-bb40-757a64bfb440 # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9261bd52-a2f4-4065-b7c1-93d4c8e5c3a5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 1fee1527-502a-4147-9819-2596df9cc26a # Have Logo
+                  uid: da93fa0a-e3e9-4b7f-b939-00ac3bad0e80
+                  value: false
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 01fce43f-ed20-4b5e-be36-71d7328c231d # Logo Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d47435c-b8cf-49d9-b485-1b3f1a254f63
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1fee1527-502a-4147-9819-2596df9cc26a # Have Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12b01ce0-416d-472e-a064-52bc8b9026d9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b7d0800a-710a-4dd5-b373-b1288e16163c
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 6f10e86d-54c4-4469-bc5a-65600177686e # Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65d93e5e-ec1e-420f-95e9-28d17d904fcb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Header
+        uid: e4f50f85-f3aa-4fdc-b82b-f2bb07fb0e25
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d4749795-9b4b-4291-b17c-df4c871af5c4 # Footer Bg Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35dfb3fa-2143-489e-8429-7130d849e366
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 50292273-61ec-435a-ae4b-e696a34af212
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 6dbb4ca8-b499-467c-bb00-d5c397693cbb # Footer Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c169b3f7-00db-4066-9ef3-4ba9114e0e6e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Footer
+        uid: f13656eb-99a1-4d5a-b982-78b9ddd0039f
+        userCondition: null
+handle: siteSettings
+hasTitleField: false
+name: 'Site Settings'
+section: e2d465f2-3eb9-4887-bcbc-dd106e39d4b0 # Site Settings
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
